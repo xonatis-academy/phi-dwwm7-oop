@@ -38,12 +38,6 @@ else if ($_SERVER['PATH_INFO'] == '/modifier-mendiant')
 {
     require DOSSIER_CONTROLLERS.'/user_controller.php';
     update();
-} 
-// Déclaration des routes
-if (isset($_SERVER['PATH_INFO']) == false) 
-{
-    require DOSSIER_CONTROLLERS.'/produit_controller.php';
-    index();
 } else if ($_SERVER['PATH_INFO'] == '/ajouter-produit')
 {
     require DOSSIER_CONTROLLERS.'/produit_controller.php';
