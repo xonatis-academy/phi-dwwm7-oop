@@ -23,14 +23,14 @@
         }
         ?>
 
-        <form method="POST" action="/projet_oop/router.php/modifier-produit?id=<?php echo $produit->id ?>" enctype="multipart/form-data" class="p-5">
+        <form method="POST" action="/projet_oop/router.php/modifier-produit?id=<?php echo $produit->getId() ?>" enctype="multipart/form-data" class="p-5">
             <div class="form-group">
                 <label>Nom du produit</label>
-                <input type="text" name="product-name" class="form-control" value="<?php echo $produit->nom ?>">
+                <input type="text" name="product-name" class="form-control" value="<?php echo $produit->getNom() ?>">
             </div>
             <div class="form-group">
                 <label>Prix du produit</label>
-                <input type="text" name="product-price" class="form-control" value="<?php echo $produit->prix ?>">
+                <input type="text" name="product-price" class="form-control" value="<?php echo $produit->getPrix() ?>">
             </div>
             <select name="product-type">
                 <option value="voiture">Produit voiture</option>
@@ -38,7 +38,7 @@
             </select>
             <div class="form-group">
                 <label>Description du produit</label>
-                <input type="text" name="product-description" class="form-control"  value="<?php echo $produit->description ?>">
+                <input type="text" name="product-description" class="form-control"  value="<?php echo $produit->getDescription() ?>">
             </div>
             <button name="btn-valider" type="submit" class="btn btn-primary">Modifier le produit</button>
         </form>

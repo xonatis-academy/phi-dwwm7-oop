@@ -9,14 +9,14 @@
 <body>
 
     <div class="container">
-        <h1 class="display-4 text-center"><?php echo $produit->nom; ?></h1>
+        <h1 class="display-4 text-center"><?php echo $produit->getNom(); ?></h1>
         <div class="row">
             <div class="col">
-                <?php echo $produit->description; ?>
+                <?php echo $produit->getDescription(); ?>
             </div>
             <div class="col">
                 <div class="m-3">
-                    <a href="https://www.paypal.com/paypalme/galaxylinq/<?php echo $produit->prix ?>" class="btn btn-primary" target="_blank">Acheter maintenant</a>
+                    <a href="https://www.paypal.com/paypalme/galaxylinq/<?php echo $produit->getPrix() ?>" class="btn btn-primary" target="_blank">Acheter maintenant</a>
                 </div>
             </div>
         </div>

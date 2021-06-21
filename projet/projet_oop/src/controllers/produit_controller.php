@@ -68,11 +68,11 @@ function convertirPayloadEnObjet(array $data, array $file): Produit
 {
     $fichier = enregistrerFichierEnvoye($file["product-photo-file"]);
     $produit = new Produit();
-    $produit->nom = $data['product-name'];
-    $produit->prix = $data['product-price'];
-    $produit->image = $fichier;
-    $produit->type = $data['product-type'];
-    $produit->description = $data['product-description'];
+    $produit->setNom($data['product-name']);
+    $produit->setPrix($data['product-price']);
+    $produit->setImage($fichier);
+    $produit->setType($data['product-type']);
+    $produit->setDescription($data['product-description']);
 
     return $produit;
 }
@@ -141,10 +141,10 @@ function update()
 
         if ($messageErreur === null)
         {
-            $produit->nom = $_POST['product-name'];
-            $produit->prix = $_POST['product-price'];
-            $produit->type = $_POST['product-type'];
-            $produit->description = $_POST['product-description'];
+            $produit->setNom($_POST['product-name']);
+            $produit->setPrix($_POST['product-price']);
+            $produit->setType($_POST['product-type']);
+            $produit->setDescription($_POST['product-description']);
             $produit->save();
             onVaRediriger('/catalogue');
         }

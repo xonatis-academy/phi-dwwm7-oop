@@ -48,12 +48,12 @@ function convertirPayloadEnObjet(array $data, array $file): User
 {
     $fichier = enregistrerFichierEnvoye($file["user-photo-file"]);
     $user = new User();
-    $user->nom = $data['user-lastname'];
-    $user->prenom = $data['user-firstname'];
-    $user->image = $fichier;
-    $user->role = $data['user-role'];
-    $user->email = $data['user-email'];
-    $user->mot_de_passe = $data['user-password'];
+    $user->setNom($data['user-lastname']);
+    $user->setPrenom($data['user-firstname']);
+    $user->setImage($fichier);
+    $user->setRole($data['user-role']);
+    $user->setEmail($data['user-email']);
+    $user->setMotDePasse($data['user-password']);
 
     return $user;
 }
@@ -120,11 +120,11 @@ function update()
     if (isset($_POST['btn-valider']))
     {
         // Exercice 3 : Modification des propriétés de l'objet
-        $user->nom = $_POST['user-lastname'];
-        $user->prenom = $_POST['user-firstname'];
-        $user->role = $_POST['user-role'];
-        $user->email = $_POST['user-email'];
-        $user->mot_de_passe = $_POST['user-password'];
+        $user->setNom($_POST['user-lastname']);
+        $user->setPrenom($_POST['user-firstname']);
+        $user->setRole($_POST['user-role']);
+        $user->setEmail($_POST['user-email']);
+        $user->setMotDePasse($_POST['user-password']);
 
         // Exercice 4 : Sauvegarder l'objet en base de données
         $user->save();

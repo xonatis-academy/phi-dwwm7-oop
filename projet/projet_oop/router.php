@@ -10,6 +10,7 @@ $conn = new mysqli('localhost', 'debian-sys-maint', '23Y4T4fR6fWLswjY');
 SimpleOrm::useConnection($conn, 'projet_oop');
 
 // Inclusion des fonctions réutilisables
+include DOSSIER_MODELS.'/Entity.php';
 include __DIR__.'/functions.php';
 
 // Déclaration des routes

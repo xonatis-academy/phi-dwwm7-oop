@@ -30,29 +30,29 @@
 
                 <tr>
                     <td class="w-25">
-                        <?php echo $element->nom ?>
+                        <?php echo $element->getNom() ?>
                     </td>
                     <td>
-                        <?php echo $element->prenom ?>
+                        <?php echo $element->getPrenom() ?>
                         </td>
                     <td>
-                        <img class="w-100" src="/projet_oop<?php echo $element->image ?>" />
+                        <img class="w-100" src="/projet_oop<?php echo $element->getImage() ?>" />
                     </td>
                     <td>
-                        <?php echo $element->role ?>
+                        <?php echo $element->getRole() ?>
                     </td>
                     <td>
-                        <?php echo $element->email ?>
+                        <?php echo $element->getEmail() ?>
                     </td>
                     <td>
-                        <?php echo $element->mot_de_passe ?>
+                        <?php echo $element->getMotDePasse() ?>
                     </td>
                     <td>
-                        <a href="/projet_oop/router.php/details-utilisateur?id=<?php echo $element->id ?>" class="btn btn-primary">Détails</a> 
+                        <a href="/projet_oop/router.php/details-utilisateur?id=<?php echo $element->getId() ?>" class="btn btn-primary">Détails</a> 
                         <!-- Exercice 6 : Ajout d'un bouton -->
-                        <a href="/projet_oop/router.php/modifier-mendiant?id=<?php echo $element->id ?>" class="btn btn-info">Modifier</a> 
+                        <a href="/projet_oop/router.php/modifier-mendiant?id=<?php echo $element->getId() ?>" class="btn btn-info">Modifier</a> 
 
-                        <a href="/projet_oop/router.php/supprimer-utilisateur?id=<?php echo $element->id ?>" class="btn btn-danger">Supprimer</a>
+                        <a href="/projet_oop/router.php/supprimer-utilisateur?id=<?php echo $element->getId() ?>" class="btn btn-danger">Supprimer</a>
                     </td>
                 </tr>
 

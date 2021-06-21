@@ -12,10 +12,10 @@
         <h1 class="display-4 text-center">Faire un don</h1>
         <div class="text-center">
             <h2>
-                <?php echo $user->prenom; ?> <?php echo $user->nom; ?>
+                <?php echo $user->getPrenom(); ?> <?php echo $user->getNom(); ?>
             </h2>
             <div>
-                <?php echo $user->email; ?>
+                <?php echo $user->getEmail(); ?>
             </div>
             <div class="m-3">
                 <a href="/projet_oop/router.php/liste" class="btn btn-secondary">Retour</a>

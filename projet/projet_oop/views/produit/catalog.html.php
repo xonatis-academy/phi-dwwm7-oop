@@ -28,28 +28,28 @@
             ?>
 
                 <tr>
-                    <td class="w-25"><?php echo $element->nom ?></td>
-                    <td><?php echo $element->prix ?> euros</td>
+                    <td class="w-25"><?php echo $element->getNom() ?></td>
+                    <td><?php echo $element->getPrix() ?> euros</td>
                     <td>
-                        <img class="w-100" src="/projet_oop<?php echo $element->image ?>" />
+                        <img class="w-100" src="/projet_oop<?php echo $element->getImage() ?>" />
                     </td>
-                    <td><?php echo $element->type ?></td>
+                    <td><?php echo $element->getType() ?></td>
                     <td><?php
-                        $taille = strlen($element->description);
+                        $taille = strlen($element->getDescription());
                         if ($taille > 25) 
                         {
-                            echo substr($element->description, 0, 25) . '...';
+                            echo substr($element->getDescription(), 0, 25) . '...';
                         }
                         else
                         {
-                            echo $element->description;
+                            echo $element->getDescription();
                         }
                         
                     ?></td>
                     <td>
-                        <a href="/projet_oop/router.php/details-produit?id=<?php echo $element->id ?>" class="btn btn-primary">Détails</a> 
-                        <a href="/projet_oop/router.php/modifier-produit?id=<?php echo $element->id ?>" class="btn btn-primary">Modifier</a> 
-                        <a href="/projet_oop/router.php/supprimer-produit?id=<?php echo $element->id ?>" class="btn btn-danger">Supprimer</a>
+                        <a href="/projet_oop/router.php/details-produit?id=<?php echo $element->getId() ?>" class="btn btn-primary">Détails</a> 
+                        <a href="/projet_oop/router.php/modifier-produit?id=<?php echo $element->getId() ?>" class="btn btn-primary">Modifier</a> 
+                        <a href="/projet_oop/router.php/supprimer-produit?id=<?php echo $element->getId() ?>" class="btn btn-danger">Supprimer</a>
                     </td>
                 </tr>
 
