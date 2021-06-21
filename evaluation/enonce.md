@@ -29,7 +29,9 @@ Donc ne plus faire hériter directement les entités de `SimpleOrm`.
 
 Pour éviter toute manipulation externe des propriétés des entités, nous allons créer des getters et des setters.
 Par exemple, pour la propriété `id` :
+
 - créer une méthode publique `getId(): string` qui renvoie la propriété interne
+
 - créer une méthode publique `setId(string $value): void` qui permet de changer la propriété interne
 
 Utilisez ces getters partout où l'on lit la valeur des propriétés et les setters partout où l'on modifie la valeur des propriétés.
@@ -49,8 +51,13 @@ Q6 : Pour chaque controller, transofrmer les fonctions en méthodes (les mettre 
 # BONUS : Renommer les fichiers et dossiers
 
 Renommer les fichiers et les dossiers suivants:
+
 - renommer le dossier `controllers` en `Controller` et verifier que cela fonctionne toujours (dans le cas contraire, faites les évolutions nécessaires)
+
 - renommer le dossier `models` en `Entity` et verifier que cela fonctionne toujours (dans le cas contraire, faites les évolutions nécessaires)
+
 - renommer le dossier `views` en `templates` et verifier que cela fonctionne toujours (dans le cas contraire, faites les évolutions nécessaires)
+
 - renommer les fichiers des controllers et verifier que cela fonctionne toujours (dans le cas contraire, faites les évolutions nécessaires)
+
 - mettre les fichiers `SimpleOrm.class.php` et `functions.php` dans un dossier `vendor` et verifier que cela fonctionne toujours (dans le cas contraire, faites les évolutions nécessaires)
