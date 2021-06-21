@@ -2,13 +2,21 @@
 
 class User extends Entity
 {
-    protected $id;
-    protected $nom;
-    protected $prenom;
-    protected $image;
-    protected $role;
-    protected $email;
-    protected $mot_de_passe;
+    public $id;
+    public $nom;
+    public $prenom;
+    public $image;
+    public $role;
+    public $email;
+    public $mot_de_passe;
+
+    /**
+     * Q3 : Pour éviter toute manipulation externe des propriétés des entités, nous allons rendre chaque propriété des entités interne et nous allons créer des getters et des setters.
+     * Par exemple, pour la propriété id :
+     * - mettre la propriété id en privé (la rendre interne)
+     * - créer une méthode publique getId(): string qui renvoie la propriété interne
+     * - créer une méthode publique setId(string $value): void qui permet de changer la propriété interne
+     */
 
     public function getId(): string
     {

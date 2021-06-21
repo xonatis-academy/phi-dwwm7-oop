@@ -11,57 +11,62 @@ SimpleOrm::useConnection($conn, 'projet_oop');
 
 // Inclusion des fonctions réutilisables
 include DOSSIER_MODELS.'/Entity.php';
+include DOSSIER_CONTROLLERS.'/AbstractController.php';
+include DOSSIER_CONTROLLERS.'/CrudController.php';
+include DOSSIER_CONTROLLERS.'/UserController.php';
+include DOSSIER_CONTROLLERS.'/ProduitController.php';
+include DOSSIER_CONTROLLERS.'/NotFoundController.php';
 include __DIR__.'/functions.php';
 
 // Déclaration des routes
 if (isset($_SERVER['PATH_INFO']) == false) 
 {
-    require DOSSIER_CONTROLLERS.'/user_controller.php';
-    index();
+    $cusinier = new UserController();
+    $cusinier->index();
 } else if ($_SERVER['PATH_INFO'] == '/inscription')
 {
-    require DOSSIER_CONTROLLERS.'/user_controller.php';
-    create();
+    $cusinier = new UserController();
+    $cusinier->create();
 } else if ($_SERVER['PATH_INFO'] == '/liste')
 {
-    require DOSSIER_CONTROLLERS.'/user_controller.php';
-    index();
+    $cusinier = new UserController();
+    $cusinier->index();
 } else if ($_SERVER['PATH_INFO'] == '/details-utilisateur')
 {
-    require DOSSIER_CONTROLLERS.'/user_controller.php';
-    show();
+    $cusinier = new UserController();
+    $cusinier->show();
 } else if ($_SERVER['PATH_INFO'] == '/supprimer-utilisateur')
 {
-    require DOSSIER_CONTROLLERS.'/user_controller.php';
-    delete();
+    $cusinier = new UserController();
+    $cusinier->delete();
 } 
 else if ($_SERVER['PATH_INFO'] == '/modifier-mendiant')
 {
-    require DOSSIER_CONTROLLERS.'/user_controller.php';
-    update();
+    $cusinier = new UserController();
+    $cusinier->update();
 } else if ($_SERVER['PATH_INFO'] == '/ajouter-produit')
 {
-    require DOSSIER_CONTROLLERS.'/produit_controller.php';
-    create();
+    $cusinier = new ProductController();
+    $cusinier->create();
 } else if ($_SERVER['PATH_INFO'] == '/catalogue')
 {
-    require DOSSIER_CONTROLLERS.'/produit_controller.php';
-    index();
+    $cusinier = new ProductController();
+    $cusinier->index();
 } else if ($_SERVER['PATH_INFO'] == '/details-produit')
 {
-    require DOSSIER_CONTROLLERS.'/produit_controller.php';
-    show();
+    $cusinier = new ProductController();
+    $cusinier->show();
 } else if ($_SERVER['PATH_INFO'] == '/supprimer-produit')
 {
-    require DOSSIER_CONTROLLERS.'/produit_controller.php';
-    delete();
+    $cusinier = new ProductController();
+    $cusinier->delete();
 } else if ($_SERVER['PATH_INFO'] == '/modifier-produit')
 {
-    require DOSSIER_CONTROLLERS.'/produit_controller.php';
-    update();
+    $cusinier = new ProductController();
+    $cusinier->update();
 }
 else
 {
-    require DOSSIER_CONTROLLERS.'/notfound_controller.php';
-    index();
+    $cusinier = new NotFoundController();
+    $cusinier->index();
 }

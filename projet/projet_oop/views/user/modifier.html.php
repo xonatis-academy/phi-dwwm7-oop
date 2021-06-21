@@ -10,7 +10,7 @@
     <div class="container">
         <h1 class="display-4 text-center">Modifier un mendiant</h1>
 
-        <form method="POST" action="/projet_oop/router.php/inscription" enctype="multipart/form-data" class="p-5">
+        <form method="POST" action="/projet_oop/router.php/modifier-mendiant" enctype="multipart/form-data" class="p-5">
             <div class="form-group">
                 <label>Nom</label>
                 <input type="text" name="user-lastname" class="form-control">
