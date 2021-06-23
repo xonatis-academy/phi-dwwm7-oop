@@ -1,60 +1,74 @@
 <?php
 
-class Logement extends Entity
-{
-    public $id;
-    public $nom;
-    public $prix;
-    public $image;
-    public $type;
-    public $description;
+namespace App\Entity {
 
-    public function getId(): string {
-        return $this->id;
-    }
+    class Logement extends Entity
+    {
+        public $id;
+        public $nom;
+        public $prix;
+        public $image;
+        public $type;
+        public $description;
 
-    public function getNom(): string {
-        return $this->nom;
-    }
+        public function getId(): string
+        {
+            return $this->id;
+        }
 
-    public function getPrix(): float {
-        return $this->prix;
-    }
+        public function getNom(): string
+        {
+            return $this->nom;
+        }
 
-    public function getImage(): string {
-        return $this->image;
-    }
+        public function getPrix(): float
+        {
+            return $this->prix;
+        }
 
-    public function getType(): string {
-        return $this->type;
-    }
+        public function getImage(): string
+        {
+            return $this->image;
+        }
 
-    public function getDescription(): string {
-        return $this->description;
-    }
+        public function getType(): string
+        {
+            return $this->type;
+        }
 
-    public function setId(string $value): void {
-        $this->id = $value;
-    }
+        public function getDescription(): string
+        {
+            return $this->description;
+        }
 
-    public function setNom(string $value): void {
-        $this->nom = $value;
-    }
+        public function setId(string $value): void
+        {
+            $this->id = $value;
+        }
 
-    public function setPrix(float $value): void {
-        $this->prix = $value;
-    }
+        public function setNom(string $value): void
+        {
+            $this->nom = $value;
+        }
 
-    public function setImage(string $value): void {
-        $this->image = $value;
-    }
+        public function setPrix(float $value): void
+        {
+            $this->prix = $value;
+        }
 
-    public function setType(string $value): void {
-        $this->type = $value;
-    }
+        public function setImage(string $value): void
+        {
+            $this->image = $value;
+        }
 
-    public function setDescription(string $value): void {
-        $this->description = $value;
+        public function setType(string $value): void
+        {
+            $this->type = $value;
+        }
+
+        public function setDescription(string $value): void
+        {
+            $this->description = $value;
+        }
     }
 }
-?>

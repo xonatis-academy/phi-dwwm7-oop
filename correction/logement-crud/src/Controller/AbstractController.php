@@ -1,5 +1,9 @@
 <?php
 
-abstract class AbstractController {
+namespace App\Controller {
+
+    abstract class AbstractController {
+
+    }
 
 }

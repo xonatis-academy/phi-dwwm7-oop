@@ -1,5 +1,10 @@
 <?php
 
-abstract class Entity extends SimpleOrm {
+namespace App\Entity {
+
+    abstract class Entity extends \SimpleOrm {
+
+    }
+    
 
 }

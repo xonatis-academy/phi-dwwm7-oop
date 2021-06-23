@@ -1,10 +1,12 @@
 <?php
 
-class NotFoundController extends AbstractController
-{
-    public function index()
+namespace App\Controller {
+
+    class NotFoundController extends AbstractController
     {
-        include DOSSIER_VIEWS.'/404.html.php';
+        public function index()
+        {
+            include DOSSIER_VIEWS . '/404.html.php';
+        }
     }
 }
-

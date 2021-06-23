@@ -11,11 +11,15 @@ SimpleOrm::useConnection($conn, 'eval_oop');
 
 // Inclusion des fonctions réutilisables
 include DOSSIER_MODELS.'/Entity.php';
+include DOSSIER_MODELS . '/Logement.php';
 include DOSSIER_CONTROLLERS.'/AbstractController.php';
 include DOSSIER_CONTROLLERS.'/CrudController.php';
 include DOSSIER_CONTROLLERS.'/LogementController.php';
 include DOSSIER_CONTROLLERS.'/NotFoundController.php';
 include __DIR__.'/vendor/functions.php';
+
+use App\Controller\LogementController;
+use App\Controller\NotFoundController;
 
 // Déclaration des routes
 if (isset($_SERVER['PATH_INFO']) == false) 

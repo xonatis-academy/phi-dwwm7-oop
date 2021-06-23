@@ -236,6 +236,8 @@ abstract class SimpleOrm
         if (isset($className::$table))
             return $className::$table;
 
+        $className = str_replace('App\\Entity\\', '', $className);
+
         // assumed config
         return strtolower($className);
     }
